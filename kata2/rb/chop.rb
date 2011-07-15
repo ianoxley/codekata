@@ -11,6 +11,19 @@ def chop(needle, haystack)
     return -1
   end
 
-  size = haystack.size
-  puts size
+  if haystack.size == 1
+    return (haystack[0] == needle) ? 0 : -1
+  end
+
+  pivot = haystack.size / 2
+  if haystack[pivot] == needle
+    return pivot
+  elsif needle < haystack[pivot]
+    # throw away 2nd half of array
+    return chop(needle, haystack.slice(0, pivot))
+  else
+    # throw away first half of array
+    return chop(needle, haystack.slice(pivot, haystack.size - pivot))
+  end
 end
+
