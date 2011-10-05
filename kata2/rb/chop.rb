@@ -24,11 +24,7 @@ def chop(needle, haystack)
   else
     # throw away first half of array
     tmp = chop(needle, haystack.slice(pivot, haystack.size - pivot))
-    if tmp == -1
-      return tmp
-    else
-      return pivot + tmp
-    end
+    return (tmp == -1) ? tmp : pivot + tmp
   end
 end
 
