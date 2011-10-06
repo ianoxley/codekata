@@ -6,6 +6,8 @@
 #
 # needle - an integer
 # haystack - a sorted array of integers
+#
+# Version 1 - using recursion
 def chop(needle, haystack)
   if haystack.empty?
     return -1

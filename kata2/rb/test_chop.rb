@@ -1,4 +1,4 @@
-require_relative 'chop.rb'
+require_relative 'chop3.rb'
 require 'test/unit'
 
 class TestChop < Test::Unit::TestCase
