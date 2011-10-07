@@ -9,10 +9,7 @@
 #
 # Version 3 - using Ruby methods
 def chop(needle, haystack)
-  if haystack.include?(needle)
-    return haystack.index(needle)
-  end
-
-  return -1
+  return haystack.index(needle) if haystack.include?(needle)
+  -1
 end
 
